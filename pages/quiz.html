@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>quiz</title>
+</head>
+
+<body>
+  <script type="text/javascript" src="../script.js"></script>
+
+  <div class="header">
+    <a href="../index.html" class="logo">Software Testing</a>
+    <div class="header-right">
+      <a href="unit.html" class="link">Unit Testing</a>
+      <a href="interface.html" class="link">Interface Testing</a>
+      <a href="system.html" class="link">System Testing</a>
+      <a href="automated.html" class="link">Automated Testing</a>
+      <a href="compliance.html" class="link">Compliance Testing</a>
+      <a href="methods.html" class="link">Test Methods</a>
+      <a href="quiz.html" class="link">Quiz</a>
+    </div>
+  </div>
+
+  <form name="Quiz">
+    <h1>Quiz!</h1>
+    <div class="sameWidth">
+      <div class="question">
+        <h3>Enter your name:
+          <input type="text" name="fname"></input>
+          <h3></h3>
+      </div>
+
+      <div class="question">
+        <h3>Question 1. Programming languages or Pokemons?</h3>
+        Select all programming languages<br>
+        <input type="checkbox" id="q1a1" name="q1" value="Ruby">
+        <label for="q1a1">Ruby</label><br>
+        <input type="checkbox" id="q1a2" name="q1" value="Metapod">
+        <label for="q1a2">Metapod</label><br>
+        <input type="checkbox" id="q1a3" name="q1" value="Swift">
+        <label for="q1a3">Swift</label><br>
+        <input type="checkbox" id="q1a4" name="q1" value="Snorlax">
+        <label for="q1a4">Snorlax</label><br>
+      </div>
+
+      <div class="question">
+        <h3>Question 2.</h3>
+        The tester writes scripts and uses another software to test the product.<br>
+        <input type="radio" id="q2a1" name="q2" value="Manual Testing">
+        <label for="q2a1">Manual Testing</label><br>
+        <input type="radio" id="q2a2" name="q2" value="Agile">
+        <label for="q2a2">Agile</label><br>
+        <input type="radio" id="q2a3" name="q2" value="Automation Testing">
+        <label for="q2a3">Automation Testing</label><br>
+      </div>
+
+      <div class="question">
+        <h3>Question 3.</h3>
+        Windows 7 was launched in <input type="number" name="q3"> <br>
+      </div>
+
+    </div>
+  </form>
+
+  <button id="submit" onClick="submit()">Submit</button> <br>
+  <h2 id="score"></h2>
+
+  <a href="../index.html">Back to homepage</a>
+
+</body>
+</html>
