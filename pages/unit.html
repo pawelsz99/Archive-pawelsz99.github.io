@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel = "stylesheet" type = "text/css" href="../styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Unit Testing</title>
-      </head>
-    <body>
-        <div class="header">
-            <a href="../index.html" class="logo">Testing</a>
-            <div class="header-right">
-              <a href="unit.html" class="link">Unit Testing</a>
-              <a href="interface.html" class="link">Interface Testing</a>
-              <a href="system.html" class="link">System Testing</a>
-              <a href="automated.html" class="link">Automated Testing</a>
-              <a href="compliance.html" class="link">Compliance Testing</a>
-              <a href="methods.html" class="link">Test Methods</a>
-              <a href="quiz.html" class="link">Quiz</a>
-            </div>
-          </div>
 
-          <div class="footer">
-            <div class="footer_info">2021 Pawel Sznura</div>
-          </div>
-    </body>
+<head>
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Testing</title>
+</head>
+
+<body>
+  <div class="header">
+    <a href="../index.html" class="logo">Testing</a>
+    <div class="header-right">
+      <a href="unit.html" class="link">Unit Testing</a>
+      <a href="interface.html" class="link">Interface Testing</a>
+      <a href="system.html" class="link">System Testing</a>
+      <a href="automated.html" class="link">Automated Testing</a>
+      <a href="compliance.html" class="link">Compliance Testing</a>
+      <a href="methods.html" class="link">Test Methods</a>
+      <a href="quiz.html" class="link">Quiz</a>
+    </div>
+  </div>
+
+  <h1 class="title">UNIT TESTING</h1>
+
+  <div class="text_wrapper">
+    <p>
+      Unit testing means looking at some small software module at a time and testing it in an isolated fashion. The main
+      thing that distinguishes unit testing from other kinds of testing is that we're testing a smaller amount of
+      software. Often the person performing the unit testing is the same person who implemented the module, and in that
+      case, we may well be doing white box testing. But unit testing can also be black-box testing. (more on white and
+      black box testing you can find <a href="methods.html">here</a>)</p>
+
+    <p>
+      The goal of unit testing is to find defects in the software's internal logic
+      under test as early as possible to create more robust software modules that we can compose later with other
+      modules and end up with a system that works. Besides the size of the software under test, the other thing that
+      distinguishes unit testing from different kinds of testing is that generally, at this level, we have no hypothesis
+      about the patterns of usage of the software under test. In other words, we're going to try to test the unit with
+      inputs from all different parts of its domain. Remember, the domain is the set of possible inputs for this piece
+      of software. Unit testing is also a kind of testing that enjoys a great deal of good tool support, and... so
+      Python has several frameworks for unit testing. It also has some frameworks for what are called mock objects, and
+      what mock objects are is fake objects that we can bolt under the software under test that mock up the behaviour of
+      the larger software system in which this unit lives.
+    </p>
+    <h2><a href="https://wiki.python.org/moin/PythonTestingToolsTaxonomy#Unit_Testing_Tools">Unit testing tools for
+        Python </a></h2>
+  </div>
+
+  <div class="footer">
+    <div class="footer_info">2021 Pawel Sznura</div>
+  </div>
+</body>
+
 </html>
