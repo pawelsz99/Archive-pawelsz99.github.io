@@ -37,6 +37,9 @@ a {
   padding-left: 50px;
   
 }
+.logo:hover {
+  text-decoration: underline;
+}
 
 .header-right {
   text-align: right;
@@ -50,6 +53,10 @@ a {
   padding-left: 20px;
   font-size: 24px;
   text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
 }
 
 .footer {
@@ -85,3 +92,33 @@ img {
   padding-right: 20px;
   padding-left: 20px;
 }
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Segoe UI;
+}
+
+.button1 {
+  background-color: white; 
+  color: #065b50; 
+  font-weight: bold;
+  border: 3px solid #bfdb1a;
+}
+
+.button1:hover {
+  background-color: #161b21;
+  color: white;
+}
+
+/* background-color: #161b21; */
