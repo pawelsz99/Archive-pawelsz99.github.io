@@ -21,7 +21,6 @@ a {
   padding: 15px;
   border: 2px solid white;
   text-align: left;
-
 }
 
 .header {
@@ -124,5 +123,7 @@ button {
   background-color: #161b21;
   color: white;
 }
+
+
 
 /* background-color: #161b21; */
