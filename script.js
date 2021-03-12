@@ -1,11 +1,8 @@
 function submit() {
     // alert("Thank you for completing the quiz")
     if (validateName()) {
-        if (validateCheckbox() &&
-            validateQuestion(document.forms.Quiz.elements.q2.value) &&
-            validateQuestion(document.forms.Quiz.elements.q3.value)) {
-            // we are now sure that every question has an answer
-            // the next step is to check if they are right or wrong
+        if (validateQuestions()) {
+            alert("ok! ")
             rightOrWrong()
         } else {
             alert("Give an answer to all questions")
@@ -15,19 +12,39 @@ function submit() {
     }
 }
 
+function validateQuestions() {
+
+    if (validateCheckbox1() &&
+        validateRadioQuestion(document.forms.Quiz.elements.q2.value) &&
+        validateRadioQuestion(document.forms.Quiz.elements.q3.value) &&
+        validateCheckbox4() &&
+        validateRadioQuestion(document.forms.Quiz.elements.q5.value) &&
+        validateRadioQuestion(document.forms.Quiz.elements.q6.value) &&
+        validateRadioQuestion(document.forms.Quiz.elements.q7.value) &&
+        validateRadioQuestion(document.forms.Quiz.elements.q8.value) &&
+        validateRadioQuestion(document.forms.Quiz.elements.q9.value) &&
+        validateRadioQuestion(document.forms.Quiz.elements.q10.value)) {
+        return true
+    } else { return false }
+
+
+}
+
 
 function rightOrWrong() {
     var score = 0
-    var max = 3
-    if (checkQ1()) {
-        score++
-    }
-    if (checkQ2()) {
-        score++
-    }
-    if (checkQ3()) {
-        score++
-    }
+    var max = 10
+    if (checkQ1()) { score++ }
+    if (checkRadioQuestion(document.forms.Quiz.elements.q2.value)) { score++ }
+    if (checkRadioQuestion(document.forms.Quiz.elements.q3.value)) { score++ }
+    if (checkQ4()) { score++ }
+    if (checkRadioQuestion(document.forms.Quiz.elements.q5.value)) { score++ }
+    if (checkQ6(document.forms.Quiz.elements.q6.value)) { score++ }
+    if (checkRadioQuestion(document.forms.Quiz.elements.q7.value)) { score++ }
+    if (checkRadioQuestion(document.forms.Quiz.elements.q8.value)) { score++ }
+    if (checkRadioQuestion(document.forms.Quiz.elements.q9.value)) { score++ }
+    if (checkQ10(document.forms.Quiz.elements.q10.value)) { score++ }
+
     // alert("Your score:  " + score + " / " + max)
     document.getElementById("score").innerHTML = "Thank you for completing the quiz <br>" +
         "Your score:  " + score + " / " + max
@@ -39,22 +56,41 @@ function checkQ1() {
     var a2 = document.getElementById("q1a2").checked
     var a3 = document.getElementById("q1a3").checked
     var a4 = document.getElementById("q1a4").checked
-    if (a1 == true && a3 == true && a2 == false && a4 == false) {
+
+    if (a1 == true && a2 == false && a3 == false && a4 == true) {
         return true
     } else { false }
 }
 
-function checkQ2() {
-    answer = document.forms.Quiz.elements.q2.value
-    if (answer == "Automation Testing") {
+function checkQ4() {
+    var a1 = document.getElementById("q4a1").checked
+    var a2 = document.getElementById("q4a2").checked
+    var a3 = document.getElementById("q4a3").checked
+    var a4 = document.getElementById("q4a4").checked
+    var a5 = document.getElementById("q4a5").checked
+
+    if (a1 == true && a2 == false && a3 == false && a4 == true && a5 == false) {
+        return true
+    } else { false }
+}
+
+function checkRadioQuestion(answer) {
+    if (answer == "True") {
         return true
     } else { return false }
 }
 
 
-function checkQ3() {
+function checkQ6() {
     answer = document.forms.Quiz.elements.q3.value
-    if (answer == "2009") {
+    if (answer == "2") {
+        return true
+    } else { return false }
+}
+
+function checkQ10() {
+    answer = document.forms.Quiz.elements.q3.value
+    if (answer == "10") {
         return true
     } else { return false }
 }
@@ -70,7 +106,7 @@ function validateName() {
 }
 
 
-function validateQuestion(x) {
+function validateRadioQuestion(x) {
     if (x === "") {
         return false
     }
@@ -78,13 +114,27 @@ function validateQuestion(x) {
 }
 
 
-function validateCheckbox() {
+function validateCheckbox1() {
     var a1 = document.getElementById("q1a1").checked
     var a2 = document.getElementById("q1a2").checked
     var a3 = document.getElementById("q1a3").checked
     var a4 = document.getElementById("q1a4").checked
 
     if (a1 == false && a2 == false && a3 == false && a4 == false) {
+        return false
+    }
+    else { return true }
+}
+
+
+function validateCheckbox4() {
+    var a1 = document.getElementById("q4a1").checked
+    var a2 = document.getElementById("q4a2").checked
+    var a3 = document.getElementById("q4a3").checked
+    var a4 = document.getElementById("q4a4").checked
+    var a5 = document.getElementById("q4a5").checked
+
+    if (a1 == false && a2 == false && a3 == false && a4 == false && a5 == false) {
         return false
     }
     else { return true }
