@@ -1,8 +1,6 @@
 function submit() {
-    // alert("Thank you for completing the quiz")
     if (validateName()) {
         if (validateQuestions()) {
-            alert("ok! ")
             rightOrWrong()
         } else {
             alert("Give an answer to all questions")
@@ -13,7 +11,6 @@ function submit() {
 }
 
 function validateQuestions() {
-
     if (validateCheckbox1() &&
         validateRadioQuestion(document.forms.Quiz.elements.q2.value) &&
         validateRadioQuestion(document.forms.Quiz.elements.q3.value) &&
@@ -26,8 +23,6 @@ function validateQuestions() {
         validateRadioQuestion(document.forms.Quiz.elements.q10.value)) {
         return true
     } else { return false }
-
-
 }
 
 
@@ -45,9 +40,8 @@ function rightOrWrong() {
     if (checkRadioQuestion(document.forms.Quiz.elements.q9.value)) { score++ }
     if (checkQ10(document.forms.Quiz.elements.q10.value)) { score++ }
 
-    // alert("Your score:  " + score + " / " + max)
     document.getElementById("score").innerHTML = "Thank you for completing the quiz <br>" +
-        "Your score:  " + score + " / " + max
+        "Your score:  " + score + " / " + max 
 }
 
 
@@ -82,15 +76,16 @@ function checkRadioQuestion(answer) {
 
 
 function checkQ6() {
-    answer = document.forms.Quiz.elements.q3.value
-    if (answer == "2") {
+    answer = document.forms.Quiz.elements.q6.value
+    if (answer == 2) {
         return true
     } else { return false }
 }
 
+
 function checkQ10() {
-    answer = document.forms.Quiz.elements.q3.value
-    if (answer == "10") {
+    answer = document.forms.Quiz.elements.q10.value
+    if (answer == 6) {
         return true
     } else { return false }
 }
